@@ -1,0 +1,26 @@
+{
+    "size_info": [
+        {
+            "size_name": "FREE",
+            "size_values": {
+                "길이": "100",
+                "어깨너비": "100",
+                "소매길이": "100",
+                "가슴": "100",
+                "허리": "100",
+                "엉덩이둘레": "100"
+            }
+        }
+    ],
+    "model_info": {
+        "height": null,
+        "weight": null,
+        "wearing_size": "FREE"
+    },
+    "filenames": {
+        "size_info": "sample_image.jpg",
+        "model_info": "sample_image.jpg"
+    },
+    "confidence": 0.85,
+    "item_cd": "123456789"
+}
