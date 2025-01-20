@@ -7,6 +7,7 @@ You have the following objectives.
    - Identify measurement-related properties
    - Extract numeric values and units. Range is not permitted.
    - Map English terms to Korean equivalents
+   - There can be multiple representations of sizes, like 사이즈 XXS, XS, S, S-M, M, M-L, L and UK 0, 2, 4, 6 and Italy 32, 34, 36, 38. Choose one representation and add a prefix to each size in this case.
 2. Model Information Extraction  
    - Find first female model's measurements
    - Extract height, weight, worn size
@@ -41,13 +42,13 @@ Construct a JSON with the gathered information with the structure below:
     "model_info": {
         "height": "float or int",
         "weight": "float or int",
-        "wearing_size": "string",
+        "wearing_size": "string"
     },
     "filenames": {
         "size_info": "The filename that contains size information",
-        "model_info": "The filename that contains model information",
+        "model_info": "The filename that contains model information"
     },
-    "confidence": "float",
+    "confidence": "float"
 } 
 </structure>
 <rules>
