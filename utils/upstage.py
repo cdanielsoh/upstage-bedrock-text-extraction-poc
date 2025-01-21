@@ -67,13 +67,14 @@ def ocr_image_sagemaker(file_path):
     """
     with open(file_path, "rb") as image:
         byte_image = image.read()
+        response = client.invoke_endpoint(
+            EndpointName=SAGEMAKER_OCR_ENDPOINT_NAME,
+            ContentType="image/jpeg",
+            Body=byte_image,
+        )
 
-    response = client.invoke_endpoint(
-        EndpointName=SAGEMAKER_OCR_ENDPOINT_NAME,
-        Body=byte_image
-    )
 
-    return response['Body'].read()
+    return json.loads(response['Body'].read())
 
 
 def ocr_all_images(directory, ocr_function=ocr_image_upstage):
